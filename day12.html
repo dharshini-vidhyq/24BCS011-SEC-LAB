@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //set- cant accept the duplicates,to uniquly identify the values
+        //create a set:
+        let email=new Set([1]);
+        email.add("ps@gamil.com");
+        email.add("java@gmail.com");
+        console.log(email)
+
+
+        //deleting:
+        email.delete("ps@gmail.com");
+        console.log(email)
+
+        for(let mail of email){
+            console.log(mail)
+                
+            
+        }
+        email.forEach(x=>{
+            console.log(x)
+        })
+         let adminpermission=new Set(["write","read","delete"]);
+         let userpermission=new Set(["read"]);
+
+         function haspermission(role, permission){
+            return role.has(permission);
+
+         }
+         console.log(haspermission(adminpermission,"delete"));
+         console.log(haspermission(userpermission,"delete"));
+        
+
+    </script>
+</body>
+</html>
